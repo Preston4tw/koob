@@ -1,8 +1,14 @@
-project: default
-source:
-  repoURL: 'https://github.com/Preston4tw/bme280'
-  path: k8s
-  targetRevision: HEAD
-destination:
-  server: 'https://192.168.4.31:6443'
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bme280
   namespace: bme280
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/Preston4tw/bme280'
+    path: k8s
+    targetRevision: HEAD
+  destination:
+    server: 'https://192.168.4.31:6443'
+    namespace: bme280
