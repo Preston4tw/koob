@@ -10,5 +10,5 @@ spec:
     path: k8s
     targetRevision: HEAD
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: {{ .Values.spec.destination.server }}
     namespace: bme280
