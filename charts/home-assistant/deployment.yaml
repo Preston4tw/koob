@@ -58,6 +58,9 @@ spec:
           volumeMounts:
             - name: home-assistant-vol
               mountPath: /config
+            - name: home-assistant-secrets-yaml
+              mountPath: /config/secrets.yaml
+              subPath: secrets.yaml
       dnsPolicy: ClusterFirst
       enableServiceLinks: true
       serviceAccountName: default
@@ -81,3 +84,6 @@ spec:
       volumes:
         - name: home-assistant-vol
           emptyDir: {}
+        - name: home-assistant-secrets-yaml
+          configMap:
+            name: home-assistant-secrets-yaml
