@@ -80,5 +80,4 @@ spec:
               mountPath: /repo
       volumes:
         - name: home-assistant-vol
-          persistentVolumeClaim:
-            claimName: home-assistant-pvc
+          emptyDir: {}
