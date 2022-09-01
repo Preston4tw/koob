@@ -3,5 +3,6 @@ kind: Kustomization
 metadata:
   name: home-assistant
 resources:
+- configmap.yaml
 - service.yaml
 - deployment.yaml
