@@ -61,6 +61,7 @@ spec:
               mountPath: /config
       dnsPolicy: ClusterFirst
       enableServiceLinks: true
+      serviceAccountName: default
       initContainers:
         # https://gist.github.com/tallclair/849601a16cebeee581ef2be50c351841
         - name: git-clone
@@ -78,7 +79,6 @@ spec:
           volumeMounts:
             - name: home-assistant-vol
               mountPath: /repo
-              serviceAccountName: default
       volumes:
         - name: home-assistant-vol
           persistentVolumeClaim:
