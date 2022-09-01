@@ -5,7 +5,6 @@ metadata:
     app.kubernetes.io/instance: home-assistant
     app.kubernetes.io/name: home-assistant
   name: home-assistant
-  namespace: home-assistant
 spec:
   replicas: 1
   revisionHistoryLimit: 3
