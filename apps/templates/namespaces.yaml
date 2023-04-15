@@ -2,3 +2,20 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: grafana
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bme280
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prometheus
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+---
