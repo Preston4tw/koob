@@ -10,13 +10,16 @@ spec:
     namespace: grafana
     server: '{{ .Values.spec.destination.server }}'
   project: default
-  source:
-    chart: grafana
-    helm:
-      parameters:
-        - name: service.type
-          value: LoadBalancer
-      valueFiles:
-        - ../grafana/values.yaml
-    repoURL: https://grafana.github.io/helm-charts/
-    targetRevision: 6.53.0
+  sources:
+    - chart: grafana
+      helm:
+        parameters:
+          - name: service.type
+            value: LoadBalancer
+        valueFiles:
+          - $values/grafana/values.yaml
+      repoURL: https://grafana.github.io/helm-charts/
+      targetRevision: 6.53.0
+    - ref: values
+      repoURL: https://github.com/Preston4tw/koob.git
+      targetRevision: HEAD
