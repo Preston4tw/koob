@@ -5,5 +5,5 @@ metadata:
   labels:
      grafana_dashboard: "1"
 data:
-  airgradient-dashboard:
-    url: https://raw.githubusercontent.com/preston4tw/koob/main/grafana/data/dashboards/airgradient.json
+  airgradient-dashboard: |
+{{ .Files.Get "data/dashboards/airgradient.json" | indent 4 }}
