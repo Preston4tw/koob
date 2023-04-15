@@ -4,15 +4,19 @@ metadata:
   name: prometheus
   namespace: argocd
 spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/prometheus-community/helm-charts/'
-    path: charts/prometheus
-    targetRevision: HEAD
-    helm:
-      parameters:
-        - name: alertmanager.enabled
-          value: 'false'
   destination:
-    server: {{ .Values.spec.destination.server }}
     namespace: prometheus
+    server: '{{ .Values.spec.destination.server }}'
+  project: default
+  sources:
+    - helm:
+        parameters:
+          - name: alertmanager.enabled
+            value: "false"
+        valueFiles:
+          - $values/prometheus/values.yaml
+      path: charts/prometheus
+      repoURL: https://github.com/prometheus-community/helm-charts/
+      targetRevision: HEAD
+    - ref: values
+      repoURL: '{{ .Values.spec.source.repoURL }}'

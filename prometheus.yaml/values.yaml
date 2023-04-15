@@ -1,0 +1,5 @@
+extraScrapeConfigs: |
+  - job_name: airgradient
+    static_configs:
+    - targets:
+      - 192.168.4.37:80

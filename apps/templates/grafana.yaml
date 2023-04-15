@@ -15,8 +15,8 @@ spec:
           - name: service.type
             value: LoadBalancer
         valueFiles:
-          - "$values/grafana/values.yaml"
+          - $values/grafana/values.yaml
       repoURL: https://grafana.github.io/helm-charts/
       targetRevision: 6.53.0
     - ref: values
-      repoURL: https://github.com/Preston4tw/koob.git
+      repoURL: '{{ .Values.spec.source.repoURL }}'
