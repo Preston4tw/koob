@@ -30,8 +30,7 @@
   "panels": [
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "mxPtizWVk"
+        "type": "prometheus"
       },
       "fieldConfig": {
         "defaults": {
@@ -85,8 +84,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "mxPtizWVk"
+            "type": "prometheus"
           },
           "editorMode": "builder",
           "expr": "esphome_sensor_value{id=\"temperature\"}",
@@ -100,8 +98,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "mxPtizWVk"
+        "type": "prometheus"
       },
       "fieldConfig": {
         "defaults": {
@@ -151,8 +148,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "mxPtizWVk"
+            "type": "prometheus"
           },
           "editorMode": "builder",
           "expr": "esphome_sensor_value{id=\"humidity\"}",
@@ -166,8 +162,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "mxPtizWVk"
+        "type": "prometheus"
       },
       "fieldConfig": {
         "defaults": {
@@ -223,8 +218,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "mxPtizWVk"
+            "type": "prometheus"
           },
           "editorMode": "builder",
           "expr": "esphome_sensor_value{id=\"senseair_co2_value\"}",
@@ -238,8 +232,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "mxPtizWVk"
+        "type": "prometheus"
       },
       "fieldConfig": {
         "defaults": {
@@ -289,8 +282,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "mxPtizWVk"
+            "type": "prometheus"
           },
           "editorMode": "builder",
           "expr": "esphome_sensor_value{id=\"particulate_matter_25m_concentration\"}",
@@ -330,8 +322,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "mxPtizWVk"
+        "type": "prometheus"
       },
       "fieldConfig": {
         "defaults": {
@@ -407,8 +398,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "mxPtizWVk"
+            "type": "prometheus"
           },
           "editorMode": "builder",
           "expr": "esphome_sensor_value{id=\"temperature\"}",
@@ -422,8 +412,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "mxPtizWVk"
+        "type": "prometheus"
       },
       "fieldConfig": {
         "defaults": {
@@ -499,8 +488,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "mxPtizWVk"
+            "type": "prometheus"
           },
           "editorMode": "builder",
           "expr": "esphome_sensor_value{id=\"humidity\"}",
@@ -514,8 +502,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "mxPtizWVk"
+        "type": "prometheus"
       },
       "fieldConfig": {
         "defaults": {
@@ -590,8 +577,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "mxPtizWVk"
+            "type": "prometheus"
           },
           "editorMode": "builder",
           "expr": "esphome_sensor_value{id=\"senseair_co2_value\"}",
@@ -605,8 +591,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "mxPtizWVk"
+        "type": "prometheus"
       },
       "fieldConfig": {
         "defaults": {
@@ -680,8 +665,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "mxPtizWVk"
+            "type": "prometheus"
           },
           "editorMode": "builder",
           "expr": "esphome_sensor_value{id=\"particulate_matter_25m_concentration\"}",
@@ -695,8 +679,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "mxPtizWVk"
+        "type": "prometheus"
       },
       "fieldConfig": {
         "defaults": {
@@ -769,8 +752,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "mxPtizWVk"
+            "type": "prometheus"
           },
           "editorMode": "builder",
           "expr": "esphome_sensor_value{id=\"uptime_sensor\"}",
