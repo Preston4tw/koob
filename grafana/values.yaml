@@ -14,7 +14,7 @@ datasources:
   datasources.yaml:
     apiVersion: 1
     datasources:
-      - name: Prometheus
+      - name: prometheus
         type: prometheus
         url: http://prometheus-server.prometheus.svc.cluster.local
         access: proxy
@@ -23,3 +23,13 @@ dashboards:
   default:
     airgradient-dashboard:
       url: https://raw.githubusercontent.com/preston4tw/koob/main/grafana/data/dashboards/airgradient.json
+grafana.ini:
+  auth:
+    disable_login_form: true
+  auth.anonymous:
+    enabled: true
+    org_role: Editor
+  auth.basic:
+    enabled: false
+  analytics:
+    check_for_updates: false
