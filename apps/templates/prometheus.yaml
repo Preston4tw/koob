@@ -1,3 +1,4 @@
+# https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus/values.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
