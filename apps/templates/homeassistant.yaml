@@ -13,4 +13,4 @@ spec:
     targetRevision: HEAD
     path: charts/home-assistant
     kustomize:
-      version: v3.5.4
+      version: default
