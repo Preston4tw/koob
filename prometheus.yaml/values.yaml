@@ -1,4 +1,4 @@
-extraScrapeConfigs: |
+extraScrapeConfigs: |-
   - job_name: airgradient
     static_configs:
     - targets:
