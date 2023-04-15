@@ -9,15 +9,6 @@ spec:
   destination:
     namespace: grafana
     server: '{{ .Values.spec.destination.server }}'
-  ignoreDifferences:
-    - group: apps
-      jsonPointers:
-        - /data/admin-password
-      kind: Secret
-    - group: apps
-      jsonPointers:
-        - /spec/template/metadata/annotations/checksum/secret
-      kind: Deployment
   project: default
   source:
     chart: grafana
@@ -26,6 +17,6 @@ spec:
         - name: service.type
           value: LoadBalancer
       valueFiles:
-        - /grafana/values.yaml
+        - ../../grafana/values.yaml
     repoURL: https://grafana.github.io/helm-charts/
     targetRevision: 6.53.0
