@@ -9,5 +9,5 @@ datasources:
         isDefault: true
 dashboards:
   default:
-    airgradient:
+    airgradient-dashboard:
       url: https://raw.githubusercontent.com/preston4tw/koob/main/grafana/data/dashboards/airgradient.json
