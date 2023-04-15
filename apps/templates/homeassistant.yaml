@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: homeassistant
+  namespace: argocd
+spec:
+  destination:
+    namespace: ha2
+    server: '{{ .Values.spec.destination.server }}'
+  project: default
+  source:
+    repoURL: '{{ .Values.spec.source.repoURL }}'
+    targetRevision: HEAD
+    path: charts/home-assistant
+    kustomize:
+      version: v3.5.4
