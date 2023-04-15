@@ -7,7 +7,13 @@ datasources:
         url: http://prometheus-server.prometheus.svc.cluster.local
         access: proxy
         isDefault: true
-dashboards:
-  default:
-    airgradient-dashboard:
-      url: https://raw.githubusercontent.com/preston4tw/koob/main/grafana/data/dashboards/airgradient.json
+sidecar:
+  dashboards:
+    enabled: true
+configMaps:
+  airgradient-dashboard:
+    name: airgradient-dashboard
+# dashboards:
+#   default:
+#     airgradient-dashboard:
+#       url: https://raw.githubusercontent.com/preston4tw/koob/main/grafana/data/dashboards/airgradient.json

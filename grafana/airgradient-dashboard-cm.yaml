@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: airgradient-dashboard
+  labels:
+     grafana_dashboard: "1"
+data:
+  airgradient-dashboard:
+    url: https://raw.githubusercontent.com/preston4tw/koob/main/grafana/data/dashboards/airgradient.json
