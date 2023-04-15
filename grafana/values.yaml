@@ -1,12 +1,12 @@
-datasources:
-  datasources.yaml:
-    apiVersion: 1
-    datasources:
-      - name: Prometheus
-        type: prometheus
-        url: http://prometheus-server.prometheus.svc.cluster.local
-        access: proxy
-        isDefault: true
-dashboards:
-  airgradient.json:
-    url: https://raw.githubusercontent.com/preston4tw/koob/main/grafana/data/dashboards/airgradient.json
+# datasources:
+#   datasources.yaml:
+#     apiVersion: 1
+#     datasources:
+#       - name: Prometheus
+#         type: prometheus
+#         url: http://prometheus-server.prometheus.svc.cluster.local
+#         access: proxy
+#         isDefault: true
+# dashboards:
+#   airgradient.json:
+#     url: https://raw.githubusercontent.com/preston4tw/koob/main/grafana/data/dashboards/airgradient.json
