@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana
+  namespace: grafana
+spec:
+  destination:
+    namespace: grafana
+    server: '{{ .Values.spec.destination.server }}'
+  project: default
+  source:
+    chart: grafana
+    helm:
+      parameters:
+        - name: service.type
+          value: LoadBalancer
+      valueFiles:
+        - ../grafana/values.yaml
+    ignoreDifferences:
+      - group: apps
+        jsonPointers:
+          - /data/admin-password
+        kind: Secret
+      - group: apps
+        jsonPointers:
+          - /spec/template/metadata/annotations/checksum/secret
+        kind: Deployment
+    repoURL: https://grafana.github.io/helm-charts/
+    targetRevision: 6.53.0
